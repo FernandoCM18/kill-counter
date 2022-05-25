@@ -25,7 +25,7 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
 });
 
 const httpLink = new HttpLink({
-  uri: import.meta.env.VITE_URL_SERVER,
+  uri: `${import.meta.env.VITE_URL_SERVER}`,
   fetchOptions: {
     credentials: 'include',
   }
@@ -49,8 +49,10 @@ const authLink = setContext((_, { headers }) => {
 
 const authedHttpLink = authLink.concat(httpLink);
 
+
+
 const wsLink = new GraphQLWsLink(createClient({
-  url: import.meta.env.VITE_URL_SERVER_WS,
+  url: `${import.meta.env.VITE_URL_SERVER_WS}`,
 }));
 
 
