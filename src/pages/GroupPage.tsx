@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Layout } from '../Layouts/Layout';
-import { H1, MediumText, Caption} from '../components/styles/TextStyle';
+import { H1, MediumText, Caption} from '../styles/TextStyle';
 
 import styled from 'styled-components';
 import { Charts } from '../components/Chart';
@@ -10,7 +10,7 @@ import { useQuery, useSubscription, gql } from '@apollo/client';
 import { GET_GROUP } from '../gql/group';
 import { GroupResponse } from '../interfaces/group';
 import { GET_KILLS, TOTAL_KILLS_PER_USER_IN_GROUP_SUBSCRIPTION, KILL_CREATED_SUBSCRIPTION } from '../gql/kill';
-import { Button } from '../components/styles/FormStyle';
+import { Button } from '../styles/FormStyle';
 import { CardWrapper } from '../components/Card';
 import { faSkull, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

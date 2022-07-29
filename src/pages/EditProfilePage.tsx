@@ -9,7 +9,7 @@ import {
 	Legend,
 	WrapperForm,
 	Button,
-} from '../components/styles/FormStyle';
+} from '../styles/FormStyle';
 import { useMutation } from '@apollo/client';
 import { UPDATE_USER } from '../gql/user';
 import { Layout } from '../Layouts/Layout';

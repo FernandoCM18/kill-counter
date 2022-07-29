@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import { ApolloProvider } from '@apollo/client';
 import App from './App';
 import './index.css';
-import { themes } from './components/styles/ColorStyles';
+import { themes } from './styles/ColorStyles';
 
 import { apollo } from './lib/apollo';
 

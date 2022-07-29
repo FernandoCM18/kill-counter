@@ -2,7 +2,7 @@ import React from 'react'
 import { Layout } from '../Layouts/Layout';
 import { ErrorMessage, Formik } from 'formik';
 import * as Yup from 'yup';
-import { Button, ErrorText, Input, Label, Legend, WrapperForm } from '../components/styles/FormStyle';
+import { Button, ErrorText, Input, Label, Legend, WrapperForm } from '../styles/FormStyle';
 import { useMutation, useSubscription, gql} from '@apollo/client';
 import { CREATE_KILL, GET_KILLS, TOTAL_KILLS_PER_USER_IN_GROUP_SUBSCRIPTION, KILL_CREATED_SUBSCRIPTION } from '../gql/kill';
 import { useNavigate, useParams } from 'react-router-dom';

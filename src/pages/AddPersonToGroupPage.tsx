@@ -4,7 +4,7 @@ import { ErrorMessage, Formik } from 'formik';
 import * as Yup from 'yup';
 import { useLazyQuery, useQuery, useMutation } from '@apollo/client';
 import { SEARCH } from '../gql/user';
-import { Button, ErrorText, Input, Label, Legend, WrapperForm } from '../components/styles/FormStyle';
+import { Button, ErrorText, Input, Label, Legend, WrapperForm } from '../styles/FormStyle';
 import { QuerySearch, User } from '../interfaces/user';
 import { useState } from 'react';
 import styled from 'styled-components';

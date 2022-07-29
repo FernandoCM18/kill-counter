@@ -1,7 +1,7 @@
 import { Layout } from '../Layouts/Layout';
 import { ErrorMessage, Formik } from 'formik';
 import * as Yup from 'yup';
-import { Button, ErrorText, Input, Label, Legend, Textarea, WrapperForm } from '../components/styles/FormStyle';
+import { Button, ErrorText, Input, Label, Legend, Textarea, WrapperForm } from '../styles/FormStyle';
 import { useMutation } from '@apollo/client';
 import { CREATE_GROUP } from '../gql/group';
 import { useNavigate } from 'react-router-dom';

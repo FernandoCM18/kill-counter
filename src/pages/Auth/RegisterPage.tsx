@@ -2,7 +2,7 @@ import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { Link, useNavigate } from 'react-router-dom';
 import { Layout } from '../../Layouts/Layout';
-import { Button, Label, Input, Legend, WrapperForm, ParragraphLink, ErrorText } from '../../components/styles/FormStyle';
+import { Button, Label, Input, Legend, WrapperForm, ParragraphLink, ErrorText } from '../../styles/FormStyle';
 import { useMutation } from '@apollo/client';
 import { CREATE_USER } from '../../gql/user';
 import useAuth from '../../hooks/useAuth';

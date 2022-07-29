@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../../gql/user';
 import { Layout } from '../../Layouts/Layout';
-import { Button, Label, Input, Legend, WrapperForm, ParragraphLink, ErrorText } from '../../components/styles/FormStyle';
+import { Button, Label, Input, Legend, WrapperForm, ParragraphLink, ErrorText } from '../../styles/FormStyle';
 import { setToken, decodeToken } from '../../utils/token';
 import  useAuth  from '../../hooks/useAuth';
 

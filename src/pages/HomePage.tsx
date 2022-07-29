@@ -5,7 +5,7 @@ import { ME } from '../gql';
 import { Layout } from '../Layouts/Layout';
 import { Card } from '../components/Card';
 import { faSkull, faCrown, faGamepad } from '@fortawesome/free-solid-svg-icons';
-import { H1, H2 } from '../components/styles/TextStyle';
+import { H1, H2 } from '../styles/TextStyle';
 import { QueryME } from '../interfaces';
 import { Spinner } from '../components/Spinner';
 
