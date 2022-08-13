@@ -1,15 +1,17 @@
 import styled from 'styled-components';
 
 export const H1 = styled.h1`
+	color: ${({theme}) => theme.text};
   font-weight: bold;
   font-size: 60px;
 
   @media (max-width: 450px) {
-    font-size: 48px;
+    font-size: 34px;
   }
 `
 
 export const H2 = styled.h2`
+	color: ${({theme}) => theme.text};
   font-weight: bold;
   font-size: 40px;
 
@@ -40,6 +42,7 @@ export const BodyMain = styled.p`
 `
 
 export const MediumText = styled.p`
+	color: ${({theme}) => theme.text};
   font-weight: normal;
   font-size: 17px;
   line-height: 130%;

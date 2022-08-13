@@ -155,7 +155,7 @@ const TableTop = styled.table`
 	}
 
 	tr {
-		border-bottom: 1px solid ${({theme}) => theme.dark.border};
+		border-bottom: 1px solid ${({theme}) => theme.border};
 	}
 `;
 
@@ -164,14 +164,14 @@ const TableHistory = styled(TableTop)``;
 const TableTitles = styled.tr``;
 
 const TableHead = styled.thead`
-	color: ${({theme}) => theme.dark.input.labelColor};
+	color: ${({theme}) => theme.label};
 	padding: 10px;
 
 	tr {
 		position: sticky;
 		top: -1px;
 		height: 50px;
-		background-color: ${({theme}) => theme.dark.backgroundColor};
+		background-color: ${({theme}) => theme.background};
 	}
 `;
 
@@ -189,7 +189,7 @@ const TableFoot = styled.tfoot`
 	tr {
 		position: sticky;
 		bottom: -1px;
-		background-color: ${({theme}) => theme.dark.backgroundColor};
+		background-color: ${({theme}) => theme.background};
 	}
 `;
 

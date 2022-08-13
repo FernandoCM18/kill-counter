@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {ThemeContext} from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { Layout } from '../Layouts/Layout';
@@ -8,6 +8,7 @@ import { useQuery, gql } from '@apollo/client';
 import { Spinner } from '../components/Spinner';
 import { useNavigate } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
+import { ToggleSwitch } from '../components/ToggleSwitch';
 
 const ME = gql`
  query {
@@ -83,6 +84,9 @@ export const UserPage = () => {
           })}>
             <span><b>Contraseña:</b> ******</span><FontAwesomeIcon icon={faChevronRight} />
           </Label>
+          <Label>
+              <span><b>Tema:</b></span><ToggleSwitch />
+          </Label>
           <Button 
             type="button"
             style={{backgroundColor: 'red'}}
@@ -101,6 +105,7 @@ export const UserPage = () => {
 const Title = styled(H1)`
   text-align: left;
   margin-left: 20px;
+  color: ${({theme}) => theme.text}
 `
 
 const WrapperData = styled.div`
@@ -112,16 +117,18 @@ const WrapperData = styled.div`
 
 const Label = styled.div`
   font-size: 20px;
-  background-color: ${({theme}) => theme.dark.card.backgroundColor};
-  height: 30px;
+  background-color: ${({theme}) => theme.backgroundCard};
+  color: ${({theme}) => theme.text};
+  min-height: 30px;
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
   border-radius: 10px;
+
    span {
-    width: 300px;
+    max-width: 300px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;

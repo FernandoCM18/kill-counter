@@ -16,33 +16,33 @@ export const WrapperForm = styled.form`
 export const Legend = styled.legend`
   font-size: 30px;
   font-weight: bold;
-  color: ${({theme}) => theme.dark.text1};
+  color: ${({theme}) => theme.text};
 `;
 
 export const Label = styled.label`
   font-size: 18px;
-  color: ${({theme}) => theme.dark.input.labelColor};
+  color: ${({theme}) => theme.text};
   text-align: left;
 `
 
 export const Input = styled.input`
-  border: 1px solid ${({theme}) => theme.dark.border};
+  border: 1px solid ${({theme}) => theme.border};
   border-radius: 15px;
-  background-color: ${({theme}) => theme.dark.input.backgroundColor};
+  background-color: ${({theme}) => theme.backgroundInput};
   height: 48px;
-  color: ${({theme}) => theme.dark.text1};
+  color: ${({theme}) => theme.text};
   padding: 0px 10px;
 
   ::placeholder {
-    color: ${({theme}) => theme.dark.input.labelColor};
+    color: #B9B9B9;
   }
 `;
 
 export const Button = styled.button`
-  background-color: ${({theme}) => theme.dark.primary};
+  background-color: ${({theme}) => theme.primary};
   border-radius: 10px;
   border: none;
-  color: ${({theme}) => theme.dark.text1};
+  color: #FFFFFF;
   padding: 10px 20px;
   height: 48px;
   font-size: 18px;
@@ -53,9 +53,10 @@ export const Button = styled.button`
 export const ParragraphLink = styled.p`
   font-size: 18px;
   font-weight: 500;
+  color: ${({theme}) => theme.text};
 
   a {
-    color: ${({theme}) => theme.dark.primary};
+    color: ${({theme}) => theme.primary};
     text-decoration: none;
   }
 `;
@@ -66,14 +67,14 @@ export const ErrorText = styled.p`
 `;
 
 export const Textarea =  styled.textarea`
-  border: 1px solid ${({theme}) => theme.dark.border};
+  border: 1px solid ${({theme}) => theme.border};
   border-radius: 15px;
-  background-color: ${({theme}) => theme.dark.input.backgroundColor};
+  background-color: ${({theme}) => theme.backgroundInput};
   height: 48px;
-  color: ${({theme}) => theme.dark.text1};
+  color: ${({theme}) => theme.text};
   padding: 10px;
 
   ::placeholder {
-    color: ${({theme}) => theme.dark.input.labelColor};
+    color: ${({theme}) => theme.label};
   }
 `;

@@ -2,24 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import { ThemeProvider } from 'styled-components';
 import { ApolloProvider } from '@apollo/client';
 import App from './App';
 import './index.css';
-import { themes } from './styles/ColorStyles';
 
 import { apollo } from './lib/apollo';
+import { ThemeProviderCustom } from './context/theme';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   // <React.StrictMode>
     <BrowserRouter>
+    <ThemeProviderCustom>
       <HelmetProvider>
-        <ThemeProvider theme={themes}>
           <ApolloProvider client={apollo}>
             <App />
           </ApolloProvider>
-        </ThemeProvider>
       </HelmetProvider>
+    </ThemeProviderCustom>
     </BrowserRouter>
   // </React.StrictMode>
 )

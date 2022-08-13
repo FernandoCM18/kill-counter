@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import { faHome, faMagnifyingGlass, faBars, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NavLink } from 'react-router-dom';
@@ -7,6 +7,7 @@ import { ME } from '../gql/user';
 
 export const Navbar = () => {
   const {refetch} = useQuery(ME);
+  const theme = useTheme();
 
   return (
     <WrapperNav>
@@ -14,10 +15,10 @@ export const Navbar = () => {
         <li key="home">
           <NavLink 
             to="/home"
-            style={({ isActive }) => ({ color: isActive ? '#FFFFFF' : '#7b8396' })}
+            style={({ isActive }) => ({ color: isActive ? theme.primary : theme.text })}
             onClick={() => refetch()}
             >
-              <FontAwesomeIcon icon={faHome} />
+              <FontAwesomeIcon icon={faHome} size="lg" />
           </NavLink>
         </li>
         {/* <li key="buttonInNav">
@@ -30,9 +31,9 @@ export const Navbar = () => {
         <li key="settings">
           <NavLink 
             to="/settings"
-            style={({ isActive }) => ({ color: isActive ? '#FFFFFF' : '#7b8396' })}
+            style={({ isActive }) => ({ color: isActive ? theme.primary : theme.text })}
           >
-              <FontAwesomeIcon icon={faBars} />
+              <FontAwesomeIcon icon={faBars} size="lg" />
           </NavLink>
         </li>
       </ul>
@@ -42,32 +43,37 @@ export const Navbar = () => {
 
 const WrapperNav = styled.nav`
   position: fixed;
-  height: 50px;
-  background-color: ${({theme}) => theme.dark.navbar.backgroundColor};
+  height: 88px;
+  background-color: ${({theme}) => theme.backgroundNavbar};
   width: 100%;
   backdrop-filter: blur(20px);
   border-radius: 20px 20px 0px 0px;
   z-index: 100;
   bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   
   ul {
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(2, 1fr);
     padding-left: 0;
+    align-items: center;
+    justify-content: center;
     
     li {
       list-style: none;
 
       a {
-        color: ${({theme}) => theme.dark.text1};
+        color: ${({theme}) => theme.text};
       }
     }
   }
 `;
 
 const ButtonInNav = styled.button`
-  background-color: ${({theme}) => theme.dark.primary};
+  background-color: ${({theme}) => theme.primary};
   border-radius: 100%;
   border: none;
   width: 60px;

@@ -139,6 +139,7 @@ const WrapperCards = styled.div`
 `;
 
 const Card = styled(CardWrapper)`
+	color: ${({theme}) => theme.text};
 	text-align: center;
 `;
 
